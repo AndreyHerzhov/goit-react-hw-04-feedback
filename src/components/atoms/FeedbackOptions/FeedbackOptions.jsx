@@ -1,5 +1,9 @@
 import { OptionButton } from './FeedbackOptions.styled'
 import PropTypes from "prop-types"
+import { nanoid } from 'nanoid'
+
+
+ 
  
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
@@ -8,7 +12,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     {options.map(el => 
     <OptionButton 
             onClick={onLeaveFeedback} 
-            key={el} name={el}>{el}
+            key={nanoid()} name={el}>{el}
       </OptionButton>
     )}
     
